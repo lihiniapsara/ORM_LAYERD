@@ -10,12 +10,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.CustomerController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.ItemController">
    <children>
       <TextField fx:id="txtId" layoutX="76.0" layoutY="66.0" onKeyReleased="#idtextKeyReleased" prefHeight="25.0" prefWidth="196.0" promptText="ID" />
       <TextField fx:id="txtName" layoutX="321.0" layoutY="66.0" onKeyReleased="#nametextKeyReleased" prefHeight="25.0" prefWidth="196.0" promptText="Name" />
-      <TextField fx:id="txtAddress" layoutX="76.0" layoutY="109.0" onKeyReleased="#addresstextKeyReleased" prefHeight="25.0" prefWidth="196.0" promptText="Address" />
-      <TextField fx:id="txtTel" layoutX="321.0" layoutY="109.0" onAction="#txtSearchOnAction" onKeyReleased="#teltextKeyReleased" prefHeight="25.0" prefWidth="196.0" promptText="Contact" />
+      <TextField fx:id="txtPrice" layoutX="76.0" layoutY="109.0" onKeyReleased="#pricetextKeyReleased" prefHeight="25.0" prefWidth="196.0" promptText="Price" />
+      <TextField fx:id="txtQty" layoutX="321.0" layoutY="109.0"  onKeyReleased="#qtytextKeyReleased" prefHeight="25.0" prefWidth="196.0" promptText="Qty" />
+
       <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="259.0" onAction="#btnSaveOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #189AB4;" text="      Save" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -39,15 +40,15 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
-      </JFXButton>      <TableView fx:id="tblCustomer" layoutX="117.0" layoutY="205.0" prefHeight="183.0" prefWidth="463.0">
+      </JFXButton>      <TableView fx:id="tblItem" layoutX="117.0" layoutY="205.0" prefHeight="183.0" prefWidth="463.0">
          <columns>
             <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
-            <TableColumn fx:id="colName" prefWidth="111.0" text="NAME" />
-            <TableColumn fx:id="colAddress" prefWidth="135.0" text="ADDRESS" />
-            <TableColumn fx:id="colTel" prefWidth="141.0" text="CONTACT" />
+            <TableColumn fx:id="colName" prefWidth="162.40000915527344" text="NAME" />
+            <TableColumn fx:id="colPrice" prefWidth="127.99993896484375" text="PRICE" />
+            <TableColumn fx:id="colQty" prefWidth="97.5999755859375" text="QTY" />
          </columns>
       </TableView>
-      <Text fx:id="title" layoutX="226.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Form">
+      <Text fx:id="title" layoutX="226.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Form">
          <effect>
             <Reflection fraction="0.0" />
          </effect>

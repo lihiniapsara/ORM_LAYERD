@@ -6,11 +6,24 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 
-public class main extends Application {
+public class Launcher extends Application {
+
+    public static void main(String[] args) {
+   launch(args);
+    }
 
     @Override
     public void start(Stage stage) throws Exception {
+        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/place_order.fxml"))));
+
+/*
         stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/customer.fxml"))));
+*/
+
+/*
+        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/item.fxml"))));
+*/
+
         stage.setTitle("Login Form");
         stage.centerOnScreen();
         stage.show();

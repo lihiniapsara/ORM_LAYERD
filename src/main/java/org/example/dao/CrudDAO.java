@@ -1,20 +1,20 @@
-package lk.ijse.dao;
+package org.example.dao;
 
-import lk.ijse.entity.Customer;
+import org.example.entity.Item;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public interface CrudDAO <T>extends SuperDAO {
+public interface CrudDAO <T> extends SuperDAO {/*
     public String currentId() throws SQLException, ClassNotFoundException ;
 
-    public T search(String tel) throws SQLException, ClassNotFoundException ;
+    public T search(String tel) throws SQLException, ClassNotFoundException ;*/
 
     public boolean save(T entity) throws SQLException, ClassNotFoundException ;
 
-    public boolean update( T entity) throws SQLException, ClassNotFoundException ;
+    public boolean update(Item entity) throws SQLException, ClassNotFoundException ;
 
     public boolean delete(String tel) throws SQLException, ClassNotFoundException ;
-    public List<T> getAll() throws SQLException, ClassNotFoundException ;
+    public List<Item> getAll() throws SQLException, ClassNotFoundException ;
 
 }

@@ -1,2 +1,4 @@
-package org.example.bo;public interface SuperBO {
+package org.example.bo;
+
+public interface SuperBO {
 }
